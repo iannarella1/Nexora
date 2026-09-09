@@ -1,80 +1,105 @@
-# NEXORA — "Simule antes de transformar."
+# NEXORA
 
-Protótipo acadêmico navegável de uma plataforma conceitual de gêmeo digital e
-simulação de decisões. Todos os dados são **fictícios e locais** — não há
-backend, banco de dados, autenticação real ou IA real.
+### Simule antes de transformar.
 
-## Como executar
+A **NEXORA** é uma plataforma de simulação baseada no conceito de **Gêmeo Digital (Digital Twin)**, desenvolvida como projeto acadêmico de Engenharia de Software.
 
-Pré-requisito: Node.js 18+ instalado.
+A proposta é permitir que o usuário visualize um ambiente, realize alterações de forma virtual e analise possíveis impactos antes de aplicar mudanças no mundo real.
+
+## 🎯 Objetivo
+
+A NEXORA busca demonstrar como a tecnologia de **Gêmeos Digitais** pode auxiliar na tomada de decisões, permitindo testar cenários, visualizar alterações e identificar possíveis problemas de forma segura e antecipada.
+
+## 💡 Como funciona?
+
+O sistema cria uma representação digital de um ambiente, permitindo que diferentes cenários sejam simulados.
+
+O usuário pode:
+
+* Visualizar o ambiente digitalmente;
+* Alterar elementos do cenário;
+* Simular diferentes situações;
+* Comparar o cenário atual com o cenário modificado;
+* Analisar possíveis impactos das alterações.
+
+> **NEXORA — Simule antes de transformar.**
+
+## 🧠 Conceito de Digital Twin
+
+**Digital Twin (Gêmeo Digital)** é uma representação virtual de um objeto, ambiente ou sistema real.
+
+Na NEXORA, esse conceito é utilizado para criar uma versão digital do ambiente e permitir a simulação de mudanças antes que elas sejam realizadas fisicamente.
+
+## 🚀 Tecnologias
+
+O protótipo foi desenvolvido utilizando:
+
+* **TypeScript**
+* **HTML5**
+* **CSS3**
+* **Vite**
+* **JavaScript**
+* **Git e GitHub**
+
+## 📱 Características
+
+* Interface web responsiva;
+* Navegação entre diferentes telas;
+* Simulação de cenários;
+* Visualização de alterações;
+* Interface desenvolvida para apresentação acadêmica;
+* Arquitetura preparada para futuras funcionalidades.
+
+## 💻 Como executar localmente
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/iannarella1/Nexora.git
+```
+
+Entre na pasta:
+
+```bash
+cd Nexora
+```
+
+Instale as dependências:
 
 ```bash
 npm install
+```
+
+Execute o projeto:
+
+```bash
 npm run dev
 ```
 
-Abra o endereço mostrado no terminal (geralmente `http://localhost:5173`).
+O Vite disponibilizará o projeto localmente, normalmente em:
 
-Para gerar uma versão de produção (arquivos estáticos):
-
-```bash
-npm run build
-npm run preview
+```text
+http://localhost:5173
 ```
 
-## Como usar
+## 🌐 Demonstração
 
-1. Na tela de login, clique em **"Entrar como demonstração"** (não é
-   necessário digitar credenciais reais).
-2. Explore o **Dashboard**, o **Meu ambiente** e clique em **"Ver análise"**
-   ou vá em **Simulações** para configurar uma nova simulação.
-3. Escolha um parâmetro e um objetivo e clique em **"SIMULAR COM IA"** —
-   a IA (simulada) vai gerar 15 cenários, calcular um score explicável para
-   cada um e recomendar o de melhor equilíbrio.
-4. Navegue por **Resultados → Comparação → Aprovação → Relatório** para ver
-   o fluxo completo de governança assistida por humano.
+O protótipo está disponível online através do GitHub Pages:
 
-## Estrutura do projeto
+**https://iannarella1.github.io/Nexora/**
 
-```
-nexora/
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── src/
-    ├── main.ts                # roteamento e bootstrap da aplicação
-    ├── router.ts               # router baseado em hash, sem dependências
-    ├── styles/                 # variáveis de design, estilos globais e responsivos
-    ├── components/             # Sidebar, Header, StatCard, Button, Chart, etc.
-    ├── pages/                  # uma tela por arquivo (Login, Dashboard, ...)
-    ├── data/mockData.ts        # dados fictícios do ambiente/empresa
-    ├── services/
-    │   ├── appState.ts         # estado da aplicação em memória
-    │   └── simulationService.ts# motor de geração e pontuação dos cenários
-    ├── utils/                  # cálculos, formatação e helpers de DOM
-    └── types/scenario.ts       # tipos TypeScript do domínio
-```
+## 🎓 Projeto acadêmico
 
-## Lógica de simulação (resumo)
+A NEXORA foi desenvolvida como parte de um projeto acadêmico de **Engenharia de Software**, com o objetivo de aplicar conceitos de desenvolvimento web, prototipação, interfaces responsivas e simulação baseada em Gêmeos Digitais.
 
-Cada cenário recebe um **score determinístico**:
+## 📌 Status
 
-```
-score = reduçãoDeCusto × pesoCusto
-      + ganhoDeProdutividade × pesoProdutividade
-      + reduçãoDeEspera × pesoEspera
-      + eficiênciaDeRecursos × pesoRecursos
-      - risco × pesoRisco
-```
+**Protótipo acadêmico em desenvolvimento.**
 
-Os pesos mudam de acordo com o objetivo escolhido pelo usuário (equilibrar,
-reduzir custos, aumentar produtividade ou reduzir espera), e o cenário
-recomendado é sempre o de **maior score** — nunca escolhido aleatoriamente.
+Novas funcionalidades e melhorias poderão ser adicionadas conforme a evolução do projeto.
 
-## Identidade acadêmica
+## 👨‍💻 Autor
 
-Este projeto é uma proposta conceitual relacionada ao **ODS 8 — Trabalho
-Decente e Crescimento Econômico**, buscando ilustrar como simulação e IA
-explicável podem apoiar decisões operacionais mais eficientes, sempre com
-aprovação humana obrigatória.
+**Miguel Iannarella**
+
+Projeto desenvolvido para fins acadêmicos.
